@@ -19,6 +19,7 @@ Use it your workflow like this:
         allowed_ips: 192.168.143.0/24,fd8c:bc10:5021::/48
         private_key: GLEiXhRwFuhw8aPy+HQfSMwwoLU0Sw8jE8MOxZ8GV3w=
         preshared_key: PWAfvVWCjiNV0Uh2DhmXhdRaT326qosSOcaDB3j9dwI=
+        dns: 1.1.1.1,1.0.0.1
 
 Of couse it's highly advised to store all sensitive data in your repository's
 secrets.
@@ -33,6 +34,7 @@ It could then become something like:
         allowed_ips: '${{ secrets.ALLOWED_IPS }}'
         private_key: '${{ secrets.PRIVATE }}'
         preshared_key: '${{ secrets.PRESHARED }}'
+        dns: '${{ secrets.DNS_IPS}}'
 
 API
 ---
